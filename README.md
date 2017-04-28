@@ -26,9 +26,9 @@ Step 1:
 
 Modify the following lines of code in the policycreationsettings.xml: 
 
-<vCenterName>vcenter@virtualmachine.local</vCenterName>  
-<vCenterUserName>vcenterUser@virtualmachine.local</vCenterUserName>
-<output>C:\scripts\spbm-output.log</output>
+vCenterName vcenter@virtualmachine.local
+vCenterUserName vcenterUser@virtualmachine.local 
+output C:\scripts\spbm-output.log
 
 Step 2: 
 Modify the following line in the spbm-policy.ps1 script: 
