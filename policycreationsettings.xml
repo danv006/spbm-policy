@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PolicyCreation>
+	<changeme>
+		<vCenterName>vcenter.virtualmachine.local</vCenterName>
+		<vCenterUserName>vCenterUser@virtualmachine.local</vCenterUserName>
+		<output>C:\scripts\spbm-output.log</output>
+	</changeme>
+	<variables>
+		<policyNames>
+			<FTT0General>vSAN No Protect - FTT-0 </FTT0General>
+			<FTT1R1>vSAN Basic Protect, Enhanced Perform, High Capacity Used FTT-1, FTM: Raid 1</FTT1R1>
+			<FTT1R5>vSAN Basic Protect, Enhanced Capacity, Low Capacity Used FTT-1, FTM: Raid 5/6</FTT1R5>
+			<FTT2R1>vSAN Enhanced Protect, Enhanced Perform, High Capacity Used FTT-2, FTM: Raid 1</FTT2R1>
+			<FTT2R5>vSAN Enhanced Protect, Enhanced Capacity, Low Capacity Used FTT-2, FTM: Raid 5/6</FTT2R5>
+			<FTT3R1>vSAN Maximum Protect, High Capacity Used FTT-3, FTM: Raid 1</FTT3R1>
+			<Example1>Example: vSAN IO Limit 2000 IOPS: Basic Protect, Enhanced Perform FTT1, FTM R1</Example1>
+		</policyNames>
+		<policyDesc>
+			<FTT0General>This policy is primarily used for applicaitons that do not require data protection or applications that maintain data replicas. Use cases include but not limited to Test, Development, Non Production, Cassandra, etc.</FTT0General>
+			<FTT1R1>This policy is designed to be the default vSAN policy that is built in.  It is primarily used for workloads that require the most performance.</FTT1R1>
+			<FTT1R5>This policy is designed to be used when it is desired to save capacity and leverage erasure coding.  Typical utilized for VMS with low IO, databases, etc.</FTT1R5>
+			<FTT2R1> To be added</FTT2R1>
+			<FTT2R5> To be added</FTT2R5>
+			<FTT3R1> To be added</FTT3R1>
+			<Example1>This is an EXAMPLE policy to be used as a template when designing a policy with a rate limiter</Example1>
+		</policyDesc>
+	</variables>
+</PolicyCreation>
